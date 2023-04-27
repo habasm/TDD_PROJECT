@@ -27,3 +27,20 @@ describe Solver do
       end
     end
   end
+
+  describe '#reverse' do
+    context 'when given a word' do
+      it 'reverses the word' do
+        expect(@solver.reverse('hello')).to eq('olleh')
+        expect(@solver.reverse('world')).to eq('dlrow')
+        expect(@solver.reverse('ruby')).to eq('ybur')
+      end
+    end
+
+    context 'when given an empty string' do
+      it 'returns an empty string' do
+        expect(@solver.reverse('')).to eq('')
+      end
+    end
+  end
+
